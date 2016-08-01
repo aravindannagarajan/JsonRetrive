@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity
 
 
     private Button login;
-    private String uurl="http://riddles.magemojo.com/rest/V1/customers";
 
     public static final String KEY_USERNAME = "username";
     public static final String KEY_PASSWORD = "password";
@@ -83,7 +82,7 @@ public class MainActivity extends AppCompatActivity
 
         System.out.println("-------------------------> paramOBJ " + paramOBJ);
 
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, uurl,paramOBJ, new Response.Listener<JSONObject>()
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, "http://riddles.magemojo.com/rest/V1/customers",paramOBJ, new Response.Listener<JSONObject>()
         {
 
             @Override
